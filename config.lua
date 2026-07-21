@@ -82,6 +82,17 @@ return {
             zoneRemoved = 'Zone #%d (%d mp/h) has been removed',
             clearedOwnZones = 'All your speed zones have been cleared',
             noZonesToClear = 'There are no active speed zones to clear'
-        }
+        },
+
+        -- Notifications
+        Notify = function(title, description, type, icon, iconColor)
+            lib.notify({
+                title = title,
+                description = description,
+                type = type,
+                icon = icon,
+                iconColor = iconColor
+            })
+        end
     }
 }
