@@ -170,12 +170,12 @@ local function openManageZonesMenu(manageAll)
                 onSelect = function()
                     removeLocalSpeedZone(zoneId)
                     TriggerServerEvent('lion_scenemenu:server:removeSpeedZone', zoneId)
-                    lib.notify({
-                        title = config.scenemenu.locales.menuTitle,
-                        description = (config.scenemenu.locales.zoneRemoved):format(zoneId, zone.speed),
-                        type = 'success',
-                        icon = 'fa-solid fa-circle-minus'
-                    })
+                    config.scenemenu.Notify(
+                        config.scenemenu.locales.menuTitle,
+                        (config.scenemenu.locales.zoneRemoved):format(zoneId, zone.speed),
+                        'success',
+                        'fa-solid fa-circle-minus'
+                    )
                     openManageZonesMenu(manageAll)
                 end
             })
@@ -237,12 +237,12 @@ local function registerTrafficMenu(isSupervisor)
                         end
 
                         if config.scenemenu.zones.preventZoneinZone and insideExistingZone then
-                            lib.notify({
-                                title = config.scenemenu.locales.menuTitle,
-                                description = config.scenemenu.locales.preventZoneinZoneError,
-                                type = 'error',
-                                icon = 'fa-solid fa-circle-exclamation'
-                            })
+                            config.scenemenu.Notify(
+                                config.scenemenu.locales.menuTitle,
+                                config.scenemenu.locales.preventZoneinZoneError,
+                                'error',
+                                'fa-solid fa-circle-exclamation'
+                            )
                             return
                         end
 
@@ -254,24 +254,24 @@ local function registerTrafficMenu(isSupervisor)
                                 end
                             end
                             if playerZoneCount >= config.scenemenu.zones.maxZonesPerPlayer then
-                                lib.notify({
-                                    title = config.scenemenu.locales.menuTitle,
-                                    description = config.scenemenu.locales.maxZonesReached,
-                                    type = 'error',
-                                    icon = 'fa-solid fa-circle-exclamation'
-                                })
+                                config.scenemenu.Notify(
+                                    config.scenemenu.locales.menuTitle,
+                                    config.scenemenu.locales.maxZonesReached,
+                                    'error',
+                                    'fa-solid fa-circle-exclamation'
+                                )
                                 return
                             end
                         end
 
                         TriggerServerEvent('lion_scenemenu:server:createSpeedZone', coords, radius, speed)
-                        lib.notify({
-                            title = config.scenemenu.locales.menuTitle,
-                            description = (config.scenemenu.locales.zoneCreated):format(radius, speed),
-                            type = 'success',
-                            icon = 'fa-solid fa-circle-check',
-                            iconColor = '#078F26'
-                        })
+                        config.scenemenu.Notify(
+                            config.scenemenu.locales.menuTitle,
+                            (config.scenemenu.locales.zoneCreated):format(radius, speed),
+                            'success',
+                            'fa-solid fa-circle-check',
+                            '#078F26'
+                        )
                     end
                 end
             end
@@ -311,21 +311,21 @@ local function registerTrafficMenu(isSupervisor)
             end
 
             if not hasOwnZones then
-                lib.notify({
-                    title = config.scenemenu.locales.menuTitle,
-                    description = config.scenemenu.locales.noZonesToClear,
-                    type = 'error',
-                    icon = 'fa-solid fa-circle-exclamation'
-                })
+                config.scenemenu.Notify(
+                    config.scenemenu.locales.menuTitle,
+                    config.scenemenu.locales.noZonesToClear,
+                    'error',
+                    'fa-solid fa-circle-exclamation'
+                )
                 return
             end
 
-            lib.notify({
-                title = config.scenemenu.locales.menuTitle,
-                description = config.scenemenu.locales.clearedOwnZones,
-                type = 'success',
-                icon = 'fa-solid fa-trash'
-            })
+            config.scenemenu.Notify(
+                config.scenemenu.locales.menuTitle,
+                config.scenemenu.locales.clearedOwnZones,
+                'success',
+                'fa-solid fa-trash'
+            )
             TriggerServerEvent('lion_scenemenu:server:clearMySpeedZones')
         end
     })
@@ -342,13 +342,13 @@ end
 RegisterCommand(config.scenemenu.command, function()
     local allowed = lib.callback.await('lion_scenemenu:server:checkScenePermission')
     if not allowed then
-        lib.notify({
-            title = config.scenemenu.locales.menuTitle,
-            description = config.scenemenu.locales.noPermission,
-            icon = "fa-solid fa-xmark",
-            iconColor = "red",
-            type = 'error'
-        })
+        config.scenemenu.Notify(
+            config.scenemenu.locales.menuTitle,
+            config.scenemenu.locales.noPermission,
+            'error',
+            'fa-solid fa-xmark',
+            'red'
+        )
         return
     end
 
