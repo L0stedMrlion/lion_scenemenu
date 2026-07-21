@@ -4,7 +4,7 @@
 
 ## 📗 DESCRIPTION
 
-Simple script using ox_lib context menus to create zones to regulate or to vehicle speeds. Supports **ESX** and **QB-Core (not tested)**. 
+Simple script using ox_lib context menus to create zones to regulate vehicles speeds or stop them. Supports **ESX** and **QB-Core (not tested)**. 
 
 ## 🙌 FEATURES
 
