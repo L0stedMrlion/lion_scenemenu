@@ -1,21 +1,30 @@
 <img width="6912" height="3024" alt="Copy of LPRP - Ilustrace(1)" src="https://github.com/user-attachments/assets/af245b78-3977-4dad-aee1-f9b151392174" />
 
-# 🦁 LION SCENEMENU
+# 🚙 LION SCENEMENU
 
-## 📗 DESCRIPTION
+A lightweight and configurable traffic control system for FiveM. Create temporary speed zones, restrict vehicle speeds, or completely stop traffic using a simple **ox_lib** context menu.
 
-Simple script using ox_lib context menus to create zones to regulate vehicles speeds or stop them. Supports **ESX** and **QB-Core (not tested)**. 
+Designed for police, fire departments, and emergency services to manage traffic during accidents, road closures, and other roleplay scenarios.
 
-## 🙌 FEATURES
+## ✨ Features
 
-* Many customization options
-* ESX/QB-Core supported
+* **Traffic Control** – Create speed zones to slow down or completely stop AI traffic
+* **Customizable Speed Limits** – Configure available speed presets and restrictions
+* **Zone Management** – View, manage, and remove your active traffic zones
+* **Supervisor Management** – Allow supervisors to manage and remove zones created by other players
+* **Job Permissions** – Restrict access to specific jobs with configurable supervisor grades
+* **Map Blips** – Display traffic zones with customizable blip icons, colors, and radius indicators
+* **Zone Restrictions** – Configure minimum and maximum radius, per-player zone limits, and overlapping-zone prevention
+* **Synchronization** – Automatically synchronize active traffic zones between players
+* **Command & Keybind** – Open the menu using a configurable command or optional keybind
+* **Simple Configuration** – Everything is configurable through a single Lua config
+* **Optimized** – Lightweight system without unnecessary loops
 
-## 🛠️ DEPENDENCIES
+---
 
-To ensure this script runs correctly, please make sure you have the following installed:
+## 🌀 Dependencies
 
-* **[ox_lib](https://github.com/overextended/ox_lib/releases)** (Required for config and optionaly notifications)
+* [ox_lib](https://github.com/overextended/ox_lib)
 
 ## 🦁 SUPPORT
 
