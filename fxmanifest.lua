@@ -3,7 +3,7 @@ game "gta5"
 
 author "Mrlion (@lostedmrlion)"
 description "Script for making speed zones"
-version "1.1"
+version "1.0"
 lua54 "true"
 
 shared_scripts {
