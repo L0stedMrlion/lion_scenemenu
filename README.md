@@ -26,6 +26,12 @@ Designed for police, fire departments, and emergency services to manage traffic 
 
 * [ox_lib](https://github.com/overextended/ox_lib)
 
+## 📸 Showcase
+
+https://youtu.be/0Nsb8hH1JNc
+
+Tested with lation_ui (supported), but perfectly work with **ox_lib** context menu.
+
 ## 🦁 SUPPORT
 
 - If you need any support just contact me on my Discord. I'm named there **lostedmrlion** or you click on [this](https://discord.com/users/710549603216261141).
